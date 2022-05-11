@@ -95,7 +95,12 @@ const LaunchPage = () => {
               </p>
               <ul className="launch-detail__link-list">
                 <li className="launch-detail__link-item">
-                  <a href={wikipedia} className="launch-detail__link wikipedia">
+                  <a
+                    href={wikipedia}
+                    className="launch-detail__link wikipedia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Wikipedia
                   </a>
                 </li>
@@ -103,12 +108,19 @@ const LaunchPage = () => {
                   <a
                     href={article_link}
                     className="launch-detail__link article"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Artcile
                   </a>
                 </li>
                 <li className="launch-detail__link-item">
-                  <a href={presskit} className="launch-detail__link presskit">
+                  <a
+                    href={presskit}
+                    className="launch-detail__link presskit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Presskit
                   </a>
                 </li>

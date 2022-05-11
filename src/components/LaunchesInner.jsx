@@ -22,7 +22,7 @@ const GET_LAUNCHES = gql`
 
 const LaunchesInner = ({ filter }) => {
   const [limit, setLimit] = useState(10);
-  const [lengthData, setLengthData] = useState(1);
+  const [lengthData, setLengthData] = useState(10);
 
   const { data, loading, error } = useQuery(GET_LAUNCHES, {
     variables: {
@@ -39,6 +39,7 @@ const LaunchesInner = ({ filter }) => {
 
   if (loading) return <Loader />;
   if (error) return <p>{error.message}</p>;
+  if (!data.launches.length) return <p>No information...</p>;
 
   const isShow = data.launches.length > lengthData;
 
