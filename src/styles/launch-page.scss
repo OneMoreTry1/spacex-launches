@@ -94,8 +94,10 @@
     &__video {
         position: relative;
         overflow: hidden;
+        margin: 0 auto;
+        max-width: 650px;
         width: 100%;
-        padding-top: 56.25%;
+        padding-top: 50%;
 
         iframe {
             position: absolute;
