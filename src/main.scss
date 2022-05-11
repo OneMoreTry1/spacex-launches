@@ -1,0 +1,88 @@
+@import "./styles/reset.scss";
+@import "./styles/mixins.scss";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    background: transparent;
+    border: 2px solid #005288;
+    border-radius: 7px;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 7px 15px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    &:after {
+        background-color: rgba(0, 82, 136, 0.8);
+        content: "";
+        height: 100%;
+        width: 0;
+        transition: width 0.3s linear;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: #fff;
+
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+.btn__back {
+    background-color: #fff;
+    bottom: 30px;
+    right: 30px;
+    position: fixed;
+}
+
+.success {
+    color: rgb(8, 145, 19);
+}
+
+.fail {
+    color: red;
+}
+
+.label {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.input {
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px 10px;
+
+    &:focus {
+        outline-color: rgb(0, 82, 136);
+    }
+}
+
+@import "./styles/loader.scss";
+
+@import "./styles/header.scss";
+@import "./styles/company-info.scss";
+@import "./styles/launches.scss";
+@import "./styles/launches-item.scss";
+@import "./styles/launches-filter.scss";
+
+@import "./styles/launch-page.scss";

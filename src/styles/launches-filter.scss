@@ -1,0 +1,19 @@
+.launches__filter {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    &-field {
+        @include respond-to('small') {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}

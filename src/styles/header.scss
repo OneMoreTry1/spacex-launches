@@ -1,0 +1,36 @@
+.header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+
+    &__link {
+        position: relative;
+        transform: translateX(35px);
+
+        &::after {
+            background-color: #005288;        
+            content: "";
+
+            bottom: -3px;
+            left: 40%;
+            margin-right: 20px;
+            position: absolute;
+            transform: translateX(-40%);
+
+            height: 2px;
+            width: 0%;
+
+            transition: width 0.3s linear, left 0.3s linear, transform 0.3s linear;
+        }
+
+        &:hover {
+            &::after {
+                left: 0;                
+                transform: translateX(0);
+                width: 82%;
+            }
+        }
+    }
+}

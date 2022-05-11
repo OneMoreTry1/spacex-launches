@@ -1,0 +1,57 @@
+.launches__item {
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 0 0 black;
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.2s linear, box-shadow 0.2s linear;
+
+    @include respond-to('small') {
+        flex-direction: column;
+    }
+
+    &:hover {
+        box-shadow: 0 0 3px black;
+        transform: scale(1.02);
+    }
+
+    &-image {
+        max-width: 150px;
+        max-height: 150px;
+
+        @include respond-to('small') {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+
+    &-text {
+        > * {
+            margin: 5px 0;
+        }
+    }
+
+    &-success {
+        font-weight: 700;
+    }
+
+    &-details {
+        align-self: flex-end;
+        color: #000;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
